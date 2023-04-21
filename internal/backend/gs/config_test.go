@@ -7,17 +7,17 @@ import (
 )
 
 var configTests = []test.ConfigTestData[Config]{
-	{"gs:bucketname:/", Config{
+	{S: "gs:bucketname:/", Cfg: Config{
 		Bucket:      "bucketname",
 		Prefix:      "",
 		Connections: 5,
 	}},
-	{"gs:bucketname:/prefix/directory", Config{
+	{S: "gs:bucketname:/prefix/directory", Cfg: Config{
 		Bucket:      "bucketname",
 		Prefix:      "prefix/directory",
 		Connections: 5,
 	}},
-	{"gs:bucketname:/prefix/directory/", Config{
+	{S: "gs:bucketname:/prefix/directory/", Cfg: Config{
 		Bucket:      "bucketname",
 		Prefix:      "prefix/directory",
 		Connections: 5,
